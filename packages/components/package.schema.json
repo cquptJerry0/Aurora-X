@@ -1,0 +1,125 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Aurora-X 包配置",
+  "description": "Aurora-X Vue3 AI组件库的 package.json 模式定义",
+  "type": "object",
+  "required": ["name", "version", "type"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "包名称",
+      "default": "aurora-x"
+    },
+    "type": {
+      "type": "string",
+      "enum": ["module", "commonjs"],
+      "description": "模块类型",
+      "default": "module"
+    },
+    "version": {
+      "type": "string",
+      "description": "包版本号，遵循语义化版本规范",
+      "pattern": "^\\d+\\.\\d+\\.\\d+(-[a-zA-Z0-9.-]+)?$"
+    },
+    "license": {
+      "type": "string",
+      "description": "许可证类型"
+    },
+    "homepage": {
+      "type": "string",
+      "description": "项目主页URL"
+    },
+    "repository": {
+      "type": "object",
+      "description": "代码仓库信息",
+      "required": ["type", "url"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "default": "git"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "bugs": {
+      "type": "object",
+      "description": "问题报告地址",
+      "properties": {
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "email": {
+          "type": "string",
+          "format": "email"
+        }
+      }
+    },
+    "keywords": {
+      "type": "array",
+      "description": "关键词列表，用于npm搜索",
+      "items": {
+        "type": "string"
+      }
+    },
+    "exports": {
+      "type": "object",
+      "description": "模块导出配置",
+      "additionalProperties": true
+    },
+    "main": {
+      "type": "string",
+      "description": "CommonJS格式主入口文件"
+    },
+    "module": {
+      "type": "string",
+      "description": "ES模块格式主入口文件"
+    },
+    "unpkg": {
+      "type": "string",
+      "description": "CDN使用的入口文件"
+    },
+    "types": {
+      "type": "string",
+      "description": "TypeScript类型定义文件"
+    },
+    "files": {
+      "type": "array",
+      "description": "发布到npm时包含的文件",
+      "items": {
+        "type": "string"
+      }
+    },
+    "scripts": {
+      "type": "object",
+      "description": "npm脚本命令",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "peerDependencies": {
+      "type": "object",
+      "description": "对等依赖，宿主环境需要提供的依赖",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "dependencies": {
+      "type": "object",
+      "description": "运行时依赖",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "devDependencies": {
+      "type": "object",
+      "description": "开发依赖",
+      "additionalProperties": {
+        "type": "string"
+      }
+    }
+  }
+}

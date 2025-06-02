@@ -1,0 +1,67 @@
+.au-typewriter {
+  overflow-x: auto;
+
+  &__content {
+    /* 基础样式 */
+
+    /* Markdown基础样式 */
+    &--markdown :deep(ul) {
+      list-style-type: disc;
+    }
+
+    /* 修改光标样式 */
+    &--typing-cursor::after {
+      content: var(--cursor-char);
+      margin-left: 2px;
+      display: inline-block;
+    }
+
+    /* 雾化效果样式 */
+    &--typing-cursor-foggy {
+      position: relative;
+      overflow: hidden;
+
+      &:last-child:after {
+        content: '';
+        width: var(--cursor-fog-width);
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          var(--cursor-fog-bg-color)
+        );
+        position: absolute;
+        margin-left: calc(-1 * var(--cursor-fog-width));
+      }
+    }
+
+    /* Markdown雾化效果样式 */
+    &--typing-markdown-cursor-foggy {
+      &:deep() h1,
+      &:deep() h2,
+      &:deep() h3,
+      &:deep() h4,
+      &:deep() h5,
+      &:deep() h6,
+      &:deep() p,
+      &:deep() ol:last-child li,
+      &:deep() ul:last-child li {
+        position: relative;
+        overflow: hidden;
+
+        &:last-child:after {
+          content: '';
+          width: var(--cursor-fog-width);
+          height: 1.5em;
+          background: linear-gradient(
+            90deg,
+            transparent,
+            var(--cursor-fog-bg-color)
+          );
+          position: absolute;
+          margin-left: calc(-1 * var(--cursor-fog-width));
+        }
+      }
+    }
+  }
+}

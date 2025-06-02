@@ -1,0 +1,9 @@
+{
+    "extends": "../../tsconfig.base.json",
+    "compilerOptions": {
+      "paths": {
+        "@aurora-x/components": ["../../packages/components/src/index.ts"]
+      },
+      "skipLibCheck": true
+    }
+  }

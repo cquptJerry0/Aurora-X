@@ -1,0 +1,194 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Aurora-X Package Configuration",
+    "description": "Aurora-X AI聊天组件库的package.json配置说明",
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string",
+        "description": "包名，使用小写和连字符",
+        "pattern": "^[a-z][a-z0-9-]*$"
+      },
+      "version": {
+        "type": "string",
+        "description": "版本号，遵循语义化版本规范",
+        "pattern": "^\\d+\\.\\d+\\.\\d+$"
+      },
+      "description": {
+        "type": "string",
+        "description": "项目描述"
+      },
+      "private": {
+        "type": "boolean",
+        "description": "是否为私有包，不发布到npm"
+      },
+      "type": {
+        "type": "string",
+        "description": "模块类型，使用ES模块系统",
+        "enum": ["module"]
+      },
+      "packageManager": {
+        "type": "string",
+        "description": "包管理器版本"
+      },
+      "engines": {
+        "type": "object",
+        "description": "运行环境要求",
+        "properties": {
+          "node": {
+            "type": "string",
+            "description": "Node.js版本要求"
+          },
+          "pnpm": {
+            "type": "string",
+            "description": "pnpm版本要求"
+          }
+        }
+      },
+      "scripts": {
+        "type": "object",
+        "description": "npm脚本命令",
+        "properties": {
+          "dev": {
+            "type": "string",
+            "description": "启动开发环境"
+          },
+          "dev:playground": {
+            "type": "string",
+            "description": "启动组件演示环境"
+          },
+          "dev:docs": {
+            "type": "string",
+            "description": "启动文档开发环境"
+          },
+          "build": {
+            "type": "string",
+            "description": "构建所有包"
+          },
+          "build:components": {
+            "type": "string",
+            "description": "只构建组件库"
+          },
+          "build:docs": {
+            "type": "string",
+            "description": "构建文档站点"
+          },
+          "lint": {
+            "type": "string",
+            "description": "运行代码检查"
+          },
+          "lint:fix": {
+            "type": "string",
+            "description": "自动修复代码问题"
+          },
+          "format": {
+            "type": "string",
+            "description": "格式化代码"
+          },
+          "check-types": {
+            "type": "string",
+            "description": "类型检查"
+          },
+          "test": {
+            "type": "string",
+            "description": "运行测试"
+          },
+          "test:watch": {
+            "type": "string",
+            "description": "监听模式运行测试"
+          },
+          "test:coverage": {
+            "type": "string",
+            "description": "生成测试覆盖率报告"
+          },
+          "release": {
+            "type": "string",
+            "description": "发布新版本"
+          },
+          "version": {
+            "type": "string",
+            "description": "更新版本号"
+          }
+        }
+      },
+      "devDependencies": {
+        "type": "object",
+        "description": "开发依赖",
+        "properties": {
+          "turbo": {
+            "type": "string",
+            "description": "Turborepo构建系统"
+          },
+          "vite": {
+            "type": "string",
+            "description": "构建工具"
+          },
+          "vue": {
+            "type": "string",
+            "description": "Vue 3框架"
+          },
+          "typescript": {
+            "type": "string",
+            "description": "TypeScript支持"
+          },
+          "eslint": {
+            "type": "string",
+            "description": "代码检查工具"
+          },
+          "oxlint": {
+            "type": "string",
+            "description": "快速代码检查工具"
+          },
+          "prettier": {
+            "type": "string",
+            "description": "代码格式化工具"
+          },
+          "@typescript-eslint/parser": {
+            "type": "string",
+            "description": "TypeScript解析器"
+          },
+          "@typescript-eslint/eslint-plugin": {
+            "type": "string",
+            "description": "TypeScript ESLint插件"
+          },
+          "vitest": {
+            "type": "string",
+            "description": "测试框架"
+          },
+          "@vue/test-utils": {
+            "type": "string",
+            "description": "Vue测试工具"
+          },
+          "@changesets/cli": {
+            "type": "string",
+            "description": "版本管理工具"
+          },
+          "cz-git": {
+            "type": "string",
+            "description": "Git提交信息工具"
+          },
+          "vitepress": {
+            "type": "string",
+            "description": "文档站点生成器"
+          }
+        }
+      },
+      "config": {
+        "type": "object",
+        "description": "其他配置",
+        "properties": {
+          "commitizen": {
+            "type": "object",
+            "description": "提交信息规范配置",
+            "properties": {
+              "path": {
+                "type": "string",
+                "description": "提交信息生成工具路径"
+              }
+            }
+          }
+        }
+      }
+    },
+    "required": ["name", "version", "private", "type", "packageManager", "scripts", "devDependencies"]
+  }

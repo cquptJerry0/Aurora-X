@@ -1,0 +1,28 @@
+{
+  "types": [
+    { "value": "feat", "name": "feat:     新功能" },
+    { "value": "fix", "name": "fix:      修复" },
+    { "value": "docs", "name": "docs:     文档" },
+    { "value": "style", "name": "style:    格式" },
+    { "value": "refactor", "name": "refactor: 重构" },
+    { "value": "perf", "name": "perf:     性能" },
+    { "value": "test", "name": "test:     测试" },
+    { "value": "build", "name": "build:    构建" },
+    { "value": "ci", "name": "ci:       CI" },
+    { "value": "chore", "name": "chore:    其他" },
+    { "value": "revert", "name": "revert:   回退" }
+  ],
+  "scopes": [
+    { "name": "components" },
+    { "name": "docs" },
+    { "name": "playground" }
+  ],
+  "messages": {
+    "type": "选择更改类型:",
+    "scope": "选择更改范围:",
+    "subject": "简短描述:",
+    "body": "详细描述:",
+    "breaking": "破坏性更改:",
+    "issues": "关联 issues:"
+  }
+}

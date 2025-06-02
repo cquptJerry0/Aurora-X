@@ -1,0 +1,185 @@
+$border-color: #eaeaea;
+$primary-color: #409eff;
+$shadow-color: rgba(0, 0, 0, 0.1);
+$transition-time: 0.3s;
+$card-width: 200px;
+$upload-btn-size: 120px;
+$gradient-bg: rgba(255, 255, 255, 0.9);
+$drop-area-bg: rgba(225, 225, 225, 0.7);
+
+.au-attachments {
+  &__wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 100px;
+  }
+
+  // 滚动容器样式
+  &__container {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__scrollX {
+    white-space: nowrap;
+    scrollbar-width: none; // Firefox
+
+    &::-webkit-scrollbar {
+      display: none; // Chrome/Safari
+    }
+  }
+
+  // 卡片样式
+  &__item {
+    display: inline-block;
+    vertical-align: top;
+    margin: 8px;
+  }
+
+  &__card {
+    width: $card-width;
+    border: 1px solid $border-color;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px $shadow-color;
+
+    &-header {
+      padding: 10px;
+      background-color: #f5f7fa;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid $border-color;
+    }
+
+    &-body {
+      padding: 10px;
+      min-height: 40px;
+    }
+  }
+
+  // 上传按钮样式
+  &__upload {
+    &-btn {
+      border: 1px dashed #dcdfe6;
+      border-radius: 4px;
+      width: $upload-btn-size;
+      height: $upload-btn-size;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: border-color $transition-time;
+
+      &:hover {
+        border-color: $primary-color;
+      }
+    }
+
+    &-wrapper {
+      display: inline-block;
+      padding: 8px;
+    }
+  }
+
+  // 导航按钮
+  &__nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    border: none;
+    border-radius: 3px;
+  }
+
+  &__prev-btn {
+    left: 8px;
+  }
+
+  &__next-btn {
+    right: 8px;
+  }
+
+  // 背景渐变
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+
+    &-start {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 50px;
+      background: linear-gradient(
+        to right,
+        $gradient-bg,
+        transparent
+      );
+      z-index: 5;
+    }
+
+    &-end {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 50px;
+      background: linear-gradient(
+        to left,
+        $gradient-bg,
+        transparent
+      );
+      z-index: 5;
+    }
+  }
+
+  // 拖拽上传区域
+  &__drop-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $drop-area-bg;
+    backdrop-filter: blur(2px);
+    border: 2px dashed $primary-color;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+  }
+
+  &__drop-icon {
+    font-size: 48px;
+    color: $primary-color;
+    margin-bottom: 12px;
+  }
+
+  &__drop-text {
+    font-size: 16px;
+    color: $primary-color;
+  }
+}
+
+// 入场动画
+.card {
+  &-enter-active,
+  &-leave-active {
+    transition: all $transition-time ease;
+  }
+
+  &-enter-from,
+  &-leave-to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}

@@ -1,0 +1,154 @@
+.au-bubble {
+  display: flex;
+  gap: var(--au-bubble-avatar-placeholder-gap);
+
+  &--start {
+    .au-bubble__content-wrapper {
+      .au-bubble__content--corner {
+        border-start-start-radius: calc(
+          var(--el-border-radius-base) - 2px
+        );
+      }
+    }
+  }
+
+  &--end {
+    justify-content: end;
+    flex-direction: row-reverse;
+
+    .au-bubble__content-wrapper {
+      align-items: flex-end;
+
+      .au-bubble__content--corner {
+        border-start-end-radius: calc(
+          var(--el-border-radius-base) - 2px
+        );
+      }
+    }
+  }
+
+  &--no-style {
+    .au-bubble__content-wrapper {
+      .au-bubble__content {
+        background-color: transparent;
+        padding: 0;
+      }
+    }
+  }
+
+  &__avatar {
+    &--size {
+      :deep(.el-avatar) {
+        width: var(--au-bubble-avatar-placeholder-width);
+        height: var(--au-bubble-avatar-placeholder-height);
+      }
+    }
+  }
+
+  &__avatar-placeholder {
+    width: var(--au-bubble-avatar-placeholder-width);
+    height: var(--au-bubble-avatar-placeholder-height);
+  }
+
+  &__content-wrapper {
+    flex: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+    max-width: 100%;
+
+    .au-bubble__header,
+    .au-bubble__content,
+    .au-bubble__footer {
+      font-size: var(--el-font-size-base);
+      color: var(--el-text-color-primary);
+      line-height: var(--el-font-line-height-primary);
+    }
+  }
+
+  &__content {
+    background-color: var(--el-fill-color);
+    padding: var(--el-padding-sm, 12px)
+      calc(var(--el-padding-sm, 12px) + 4px);
+    border-radius: calc(var(--el-border-radius-base) + 4px);
+    position: relative;
+    box-sizing: border-box;
+    min-width: 0;
+    max-width: var(--bubble-content-max-width);
+    color: var(--el-text-color-primary);
+    font-size: var(--el-font-size-base);
+    line-height: var(--el-font-line-height-primary);
+    min-height: calc(
+      var(--el-padding-sm, 12px) * 2 +
+        var(--el-font-line-height-primary) *
+        var(--el-font-size-base)
+    );
+    word-break: break-word;
+
+    // 气泡样式变体
+    &--round {
+      border-radius: var(--el-border-radius-round);
+    }
+
+    &--filled {
+      background-color: var(--el-fill-color);
+    }
+
+    &--borderless {
+      background-color: var(--el-fill-color);
+      border: var(--el-border-width) solid var(--el-border-color);
+    }
+
+    &--outlined {
+      background: none;
+      border: var(--el-border-width) solid var(--el-border-color);
+    }
+
+    &--shadow {
+      background: none;
+      box-shadow: var(--el-box-shadow);
+    }
+
+    &--loading {
+      width: fit-content;
+    }
+  }
+
+  &__typewriter {
+    &--no-content {
+      height: 0;
+    }
+  }
+
+  &__loading-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+
+  &__dot {
+    width: 5px;
+    height: 5px;
+    background-color: var(--el-color-primary);
+    border-radius: 50%;
+    animation: wave 1s infinite ease-in-out;
+  }
+
+  &__footer {
+    margin-top: var(--el-padding-sm, 12px);
+  }
+
+  /* 波浪动画 */
+  @keyframes wave {
+    0%,
+    100% {
+      transform: translateY(-2px);
+    }
+
+    50% {
+      transform: translateY(2px);
+    }
+  }
+}

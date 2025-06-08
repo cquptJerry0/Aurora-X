@@ -7,7 +7,7 @@ import Bubble from '../Bubble/index.vue'
 import { createBEM } from '../../utils'
 import type { BubbleListProps } from './type.d.ts'
 import loadingBg from './loading.vue'
-
+import { ElIcon } from 'element-plus'
 const props = withDefaults(defineProps<BubbleListProps<T>>(), {
   list: () => [] as T[],
   maxHeight: '500px',
@@ -272,7 +272,7 @@ defineExpose({
       @click="scrollToBottom"
     >
       <slot name="backToBottom">
-        <au-icon
+        <el-icon
           :class="bem.e('back-icon')"
           :style="{ color: props.btnColor }"
         >
@@ -281,7 +281,7 @@ defineExpose({
             v-if="props.btnLoading"
             :class="bem.e('loading-bg')"
           />
-        </au-icon>
+        </el-icon>
       </slot>
     </div>
   </div>

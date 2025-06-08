@@ -1,1 +1,1 @@
-export declare function useConfig(): import('./type').ConfigProps;
+export declare function useConfig(): import('./type').ConfigProps

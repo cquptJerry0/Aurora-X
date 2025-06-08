@@ -1,16 +1,12 @@
 <script setup lang="ts" generic="T extends BubbleProps">
+import { ArrowDownBold } from '@element-plus/icons-vue'
+import { onBeforeUnmount, onMounted } from 'vue'
 import type { BubbleProps } from '../Bubble/type'
 import type { TypewriterInstance } from '../Typewriter/type'
-import type { BubbleListProps } from './type.d.ts'
-import { ArrowDownBold } from '@element-plus/icons-vue'
 import Bubble from '../Bubble/index.vue'
-import loadingBg from './loading.vue'
 import { createBEM } from '../../utils'
-import { onBeforeUnmount, onMounted } from 'vue'
-
-const { b } = createBEM('au')
-const bubbleList = b('bubble-list')
-const bem = bubbleList.aux()
+import type { BubbleListProps } from './type.d.ts'
+import loadingBg from './loading.vue'
 
 const props = withDefaults(defineProps<BubbleListProps<T>>(), {
   list: () => [] as T[],
@@ -27,8 +23,10 @@ const props = withDefaults(defineProps<BubbleListProps<T>>(), {
   btnColor: '#409EFF',
   btnIconSize: 24,
 })
-
 const emits = defineEmits(['complete'])
+const { b } = createBEM('au')
+const bubbleList = b('bubble-list')
+const bem = bubbleList.aux()
 
 /* 核心点1: 滚动状态检测与控制 */
 const scrollContainer = ref<HTMLElement | null>(null)

@@ -1,14 +1,14 @@
 {
   "name": "aurora-x",
+  "type": "module",
   "version": "0.1.0",
-  "description": "A modern AI chat component library",
   "private": true,
+  "packageManager": "pnpm@10.9.0",
+  "description": "A modern AI chat component library",
   "workspaces": [
     "packages/*",
     "apps/*"
   ],
-  "type": "module",
-  "packageManager": "pnpm@10.9.0",
   "engines": {
     "node": ">=18",
     "pnpm": ">=10.9.0"
@@ -18,19 +18,13 @@
     "dev:playground": "turbo run dev --filter=playground",
     "dev:docs": "turbo run dev --filter=docs",
     "build": "turbo run build",
-    "build:components": "turbo run build --filter=components",
+    "build:components": "turbo run build --filter=vue-aurora-x",
     "build:docs": "turbo run build --filter=docs",
     "docs:deploy": "gh-pages -d apps/docs/.vitepress/dist",
-    "lint": "turbo run lint",
-    "lint:fix": "oxlint ./packages --fix && eslint . --fix",
-    "format": "prettier --write \"**/*.{ts,tsx,vue,md}\"",
-    "check-types": "turbo run check-types",
-    "release": "changeset publish",
-    "version": "changeset version",
-    "prepare": "husky install",
-    "commit": "git-cz"
+    "docs:build-deploy": "pnpm run build:docs && pnpm run docs:deploy"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^2.9.0",
     "@changesets/cli": "^2.28.1",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
@@ -51,13 +45,6 @@
   "config": {
     "commitizen": {
       "path": "node_modules/cz-git"
-    }
-  },
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js"
     }
   }
 }

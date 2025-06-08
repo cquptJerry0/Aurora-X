@@ -1,4 +1,4 @@
-import { type Ref } from 'vue'
+import type { Ref } from 'vue'
 
 /**
  * 雾化效果和背景色处理钩子

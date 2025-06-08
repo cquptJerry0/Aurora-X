@@ -1,5 +1,6 @@
 import Prism from 'prismjs'
 import './prism.css'
+
 Prism.highlightAll()
 
 export function usePrism() {

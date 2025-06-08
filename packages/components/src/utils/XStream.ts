@@ -76,7 +76,7 @@ export interface XReadableStream<T = SSEOutput>
    * 异步迭代器方法，支持for await...of语法
    * @example for await (const event of stream) { ... }
    */
-  [Symbol.asyncIterator](): AsyncGenerator<T>
+  [Symbol.asyncIterator]: () => AsyncGenerator<T>
 
   /**
    * 流读取器引用，用于内部管理
@@ -87,7 +87,7 @@ export interface XReadableStream<T = SSEOutput>
    * 取消流的处理方法
    * @returns Promise<void>
    */
-  cancel(): Promise<void>
+  cancel: () => Promise<void>
 }
 
 /**

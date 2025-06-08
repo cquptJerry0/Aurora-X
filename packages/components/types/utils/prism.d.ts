@@ -1,1 +1,4 @@
-export declare function usePrism(): (code: string, lang: string) => string;
+export declare function usePrism(): (
+  code: string,
+  lang: string
+) => string

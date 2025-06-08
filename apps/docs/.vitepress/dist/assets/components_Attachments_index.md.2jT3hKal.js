@@ -1,4 +1,23 @@
-import{_ as i,a,o as t,ai as n}from"./chunks/framework.CHJro7v5.js";const g=JSON.parse('{"title":"Attachments 附件组件","description":"","frontmatter":{},"headers":[],"relativePath":"components/Attachments/index.md","filePath":"components/Attachments/index.md"}'),h={name:"components/Attachments/index.md"};function l(p,s,k,e,d,r){return t(),a("div",null,s[0]||(s[0]=[n(`<h1 id="attachments-附件组件" tabindex="-1">Attachments 附件组件 <a class="header-anchor" href="#attachments-附件组件" aria-label="Permalink to &quot;Attachments 附件组件&quot;">​</a></h1><p>Attachments 组件提供一个灵活的文件附件展示容器，支持多种布局方式和拖拽上传功能。</p><h2 id="功能特点" tabindex="-1">功能特点 <a class="header-anchor" href="#功能特点" aria-label="Permalink to &quot;功能特点&quot;">​</a></h2><ul><li>📝 多种布局模式 - 支持水平滚动、垂直滚动和换行布局</li><li>🚀 拖拽上传 - 内置拖拽区域上传文件功能</li><li>🔄 自适应渐变 - 滚动边界智能渐变效果</li><li>📊 文件列表 - 灵活的文件卡片展示系统</li><li>🎛️ 自定义限制 - 可设置上传数量限制</li></ul><h2 id="基础用法" tabindex="-1">基础用法 <a class="header-anchor" href="#基础用法" aria-label="Permalink to &quot;基础用法&quot;">​</a></h2><div class="language-vue vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">vue</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">template</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&gt;</span></span>
+import {
+  _ as i,
+  a,
+  o as t,
+  ai as n,
+} from './chunks/framework.zDigGmb2.js'
+const g = JSON.parse(
+    '{"title":"Attachments 附件组件","description":"","frontmatter":{},"headers":[],"relativePath":"components/Attachments/index.md","filePath":"components/Attachments/index.md"}'
+  ),
+  h = { name: 'components/Attachments/index.md' }
+function l(p, s, k, e, d, r) {
+  return (
+    t(),
+    a(
+      'div',
+      null,
+      s[0] ||
+        (s[0] = [
+          n(
+            `<h1 id="attachments-附件组件" tabindex="-1">Attachments 附件组件 <a class="header-anchor" href="#attachments-附件组件" aria-label="Permalink to &quot;Attachments 附件组件&quot;">​</a></h1><p>Attachments 组件提供一个灵活的文件附件展示容器，支持多种布局方式和拖拽上传功能。</p><h2 id="功能特点" tabindex="-1">功能特点 <a class="header-anchor" href="#功能特点" aria-label="Permalink to &quot;功能特点&quot;">​</a></h2><ul><li>📝 多种布局模式 - 支持水平滚动、垂直滚动和换行布局</li><li>🚀 拖拽上传 - 内置拖拽区域上传文件功能</li><li>🔄 自适应渐变 - 滚动边界智能渐变效果</li><li>📊 文件列表 - 灵活的文件卡片展示系统</li><li>🎛️ 自定义限制 - 可设置上传数量限制</li></ul><h2 id="基础用法" tabindex="-1">基础用法 <a class="header-anchor" href="#基础用法" aria-label="Permalink to &quot;基础用法&quot;">​</a></h2><div class="language-vue vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">vue</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">template</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&gt;</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  &lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">au-attachments</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    :</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">items</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">attachmentList</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;</span></span>
 <span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">    overflow</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;scrollX&quot;</span></span>
@@ -50,4 +69,12 @@ import{_ as i,a,o as t,ai as n}from"./chunks/framework.CHJro7v5.js";const g=JSON
 <span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">  limit</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">?:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> number</span></span>
 <span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">  hideUpload</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">?:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> boolean</span></span>
 <span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">  dragTarget</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">?:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> string</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> HTMLElement</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> |</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> null</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></div>`,14)]))}const c=i(h,[["render",l]]);export{g as __pageData,c as default};
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></div>`,
+            14
+          ),
+        ])
+    )
+  )
+}
+const c = i(h, [['render', l]])
+export { g as __pageData, c as default }

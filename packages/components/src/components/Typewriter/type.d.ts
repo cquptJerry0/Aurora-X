@@ -1,7 +1,4 @@
-import type MarkdownIt from 'markdown-it'
 // types.ts
-import type { ComputedRef, Ref } from 'vue'
-import type { MarkdownItPlugin } from '../Config/type'
 import type { HighlightFunction } from '../../utils/usePrism'
 
 /**

@@ -8,7 +8,6 @@ import { libInjectCss } from 'vite-plugin-lib-inject-css'
 import autoImportPlugin from './autoImport'
 import dtsPlugin from './dts'
 
-import Components from 'unplugin-vue-components/vite'
 // import prismjsPlugin from './prismjs'
 
 /**

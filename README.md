@@ -25,11 +25,6 @@ yarn add vue-aurora-x
 ## 🚀 快速开始
 
 ```vue
-<template>
-  <AuBubble :content="content" />
-  <AuTypewriter :text="streamingContent" />
-</template>
-
 <script setup>
 import { ref } from 'vue'
 import { AuBubble, AuTypewriter } from 'vue-aurora-x'
@@ -44,6 +39,11 @@ eventSource.onmessage = (event) => {
   streamingContent.value += event.data
 }
 </script>
+
+<template>
+  <AuBubble :content="content" />
+  <AuTypewriter :text="streamingContent" />
+</template>
 ```
 
 ## 📚 文档
@@ -53,11 +53,13 @@ eventSource.onmessage = (event) => {
 ## 🧩 组件
 
 - **输出组件**
+
   - `Bubble` - AI 回复气泡
   - `BubbleList` - 对话消息列表
   - `Typewriter` - 打字机效果
 
 - **输入组件**
+
   - `Attachments` - 文件上传附件
 
 - **工具**

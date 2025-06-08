@@ -13,14 +13,6 @@ BubbleList 组件提供了一个用于展示对话气泡列表的容器，支持
 ## 基础用法
 
 ```vue
-<template>
-  <au-bubble-list
-    :list="messageList"
-    max-height="600px"
-    @complete="handleComplete"
-  />
-</template>
-
 <script setup>
 import { ref } from 'vue'
 
@@ -47,6 +39,14 @@ function handleComplete(instance, index) {
   console.log(`消息 ${index} 完成显示`)
 }
 </script>
+
+<template>
+  <au-bubble-list
+    :list="messageList"
+    max-height="600px"
+    @complete="handleComplete"
+  />
+</template>
 ```
 
 ## 属性

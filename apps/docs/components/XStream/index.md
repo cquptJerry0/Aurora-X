@@ -154,9 +154,9 @@ interface XStreamOptions<Output = SSEOutput> {
 // 扩展的ReadableStream
 interface XReadableStream<T = SSEOutput>
   extends ReadableStream<T> {
-  [Symbol.asyncIterator](): AsyncGenerator<T>
+  [Symbol.asyncIterator]: () => AsyncGenerator<T>
   reader?: ReadableStreamDefaultReader<T>
-  cancel(): Promise<void>
+  cancel: () => Promise<void>
 }
 ```
 

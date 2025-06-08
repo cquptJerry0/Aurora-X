@@ -1,4 +1,23 @@
-import{_ as i,a,o as t,ai as n}from"./chunks/framework.CHJro7v5.js";const o=JSON.parse('{"title":"BubbleList 气泡列表组件","description":"","frontmatter":{},"headers":[],"relativePath":"components/BubbleList/index.md","filePath":"components/BubbleList/index.md"}'),l={name:"components/BubbleList/index.md"};function h(e,s,k,p,d,r){return t(),a("div",null,s[0]||(s[0]=[n(`<h1 id="bubblelist-气泡列表组件" tabindex="-1">BubbleList 气泡列表组件 <a class="header-anchor" href="#bubblelist-气泡列表组件" aria-label="Permalink to &quot;BubbleList 气泡列表组件&quot;">​</a></h1><p>BubbleList 组件提供了一个用于展示对话气泡列表的容器，支持自动滚动和返回底部功能。</p><h2 id="功能特点" tabindex="-1">功能特点 <a class="header-anchor" href="#功能特点" aria-label="Permalink to &quot;功能特点&quot;">​</a></h2><ul><li>🔄 自动滚动 - 新消息自动滚动到底部</li><li>🖱️ 智能交互 - 用户向上滚动时自动暂停自动滚动</li><li>⬇️ 返回底部 - 内置返回底部按钮</li><li>📱 响应式设计 - 适配各种屏幕尺寸</li><li>🎭 事件触发 - 可配置的消息完成事件触发机制</li></ul><h2 id="基础用法" tabindex="-1">基础用法 <a class="header-anchor" href="#基础用法" aria-label="Permalink to &quot;基础用法&quot;">​</a></h2><div class="language-vue vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">vue</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">template</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&gt;</span></span>
+import {
+  _ as i,
+  a,
+  o as t,
+  ai as n,
+} from './chunks/framework.zDigGmb2.js'
+const o = JSON.parse(
+    '{"title":"BubbleList 气泡列表组件","description":"","frontmatter":{},"headers":[],"relativePath":"components/BubbleList/index.md","filePath":"components/BubbleList/index.md"}'
+  ),
+  l = { name: 'components/BubbleList/index.md' }
+function h(e, s, k, p, d, r) {
+  return (
+    t(),
+    a(
+      'div',
+      null,
+      s[0] ||
+        (s[0] = [
+          n(
+            `<h1 id="bubblelist-气泡列表组件" tabindex="-1">BubbleList 气泡列表组件 <a class="header-anchor" href="#bubblelist-气泡列表组件" aria-label="Permalink to &quot;BubbleList 气泡列表组件&quot;">​</a></h1><p>BubbleList 组件提供了一个用于展示对话气泡列表的容器，支持自动滚动和返回底部功能。</p><h2 id="功能特点" tabindex="-1">功能特点 <a class="header-anchor" href="#功能特点" aria-label="Permalink to &quot;功能特点&quot;">​</a></h2><ul><li>🔄 自动滚动 - 新消息自动滚动到底部</li><li>🖱️ 智能交互 - 用户向上滚动时自动暂停自动滚动</li><li>⬇️ 返回底部 - 内置返回底部按钮</li><li>📱 响应式设计 - 适配各种屏幕尺寸</li><li>🎭 事件触发 - 可配置的消息完成事件触发机制</li></ul><h2 id="基础用法" tabindex="-1">基础用法 <a class="header-anchor" href="#基础用法" aria-label="Permalink to &quot;基础用法&quot;">​</a></h2><div class="language-vue vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">vue</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">template</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&gt;</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  &lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">au-bubble-list</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    :</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">list</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">messageList</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;</span></span>
 <span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">    max-height</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;600px&quot;</span></span>
@@ -47,4 +66,12 @@ import{_ as i,a,o as t,ai as n}from"./chunks/framework.CHJro7v5.js";const o=JSON
 <span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">  btnLoading</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">?:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> boolean</span></span>
 <span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">  btnColor</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">?:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> string</span></span>
 <span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">  btnIconSize</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">?:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> number</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></div>`,16)]))}const g=i(l,[["render",h]]);export{o as __pageData,g as default};
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></div>`,
+            16
+          ),
+        ])
+    )
+  )
+}
+const g = i(l, [['render', h]])
+export { o as __pageData, g as default }

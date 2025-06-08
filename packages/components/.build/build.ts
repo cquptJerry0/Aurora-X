@@ -2,8 +2,8 @@
  * 组件库构建配置文件
  * 定义了组件库打包的各种选项和入口
  */
-import type { BuildOptions } from 'vite'
 import { extname, join, relative, resolve } from 'node:path'
+import type { BuildOptions } from 'vite'
 import fg from 'fast-glob' // fast-glob 用于快速查找匹配的文件
 
 // 定义根目录路径

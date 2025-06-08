@@ -61,8 +61,9 @@ export function AuroraXResolver(
     if (
       !isAuroraXComponent(componentName) ||
       exclude.includes(componentName)
-    )
+    ) {
       return
+    }
 
     return {
       // 返回组件信息

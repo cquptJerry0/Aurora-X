@@ -1,5 +1,5 @@
-import { default as MarkdownIt } from 'markdown-it';
-import { XSSConfig } from '../type';
+import type { default as MarkdownIt } from 'markdown-it'
+import type { XSSConfig } from '../type'
 /**
  * Markdown渲染和配置管理钩子
  * 提供高度可配置的Markdown渲染功能
@@ -8,11 +8,11 @@ import { XSSConfig } from '../type';
  * @returns Markdown相关方法和属性
  */
 export declare function useMarkdown(options?: {
-    highlight?: (code: string, lang: string) => string;
-    plugins?: any[];
-    xss?: boolean | XSSConfig;
+  highlight?: (code: string, lang: string) => string
+  plugins?: any[]
+  xss?: boolean | XSSConfig
 }): {
-    md: MarkdownIt;
-    applyPlugins: (plugins?: any[]) => void;
-    render: (content: string) => string;
-};
+  md: MarkdownIt
+  applyPlugins: (plugins?: any[]) => void
+  render: (content: string) => string
+}

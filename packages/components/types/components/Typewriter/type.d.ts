@@ -1,7 +1,4 @@
-import { default as MarkdownIt } from 'markdown-it';
-import { ComputedRef, Ref } from 'vue';
-import { MarkdownItPlugin } from '../Config/type';
-import { HighlightFunction } from '../../utils/usePrism';
+import type { HighlightFunction } from '../../utils/usePrism'
 /**
  * 打字效果配置项
  */

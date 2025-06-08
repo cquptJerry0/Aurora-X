@@ -9,11 +9,6 @@ import { debounce } from '../../utils/deth'
 import { createBEM } from '../../utils'
 import type { AttachmentsProps } from './type.d.ts'
 
-// 初始化BEM工具类
-const { b } = createBEM('au')
-const attachments = b('attachments')
-const bem = attachments.aux()
-
 const props = withDefaults(defineProps<AttachmentsProps>(), {
   items: () => [],
   overflow: 'scrollX',
@@ -22,12 +17,15 @@ const props = withDefaults(defineProps<AttachmentsProps>(), {
   hideUpload: false,
   dragTarget: null,
 })
-
 const emits = defineEmits([
   'uploadDrop',
   'uploadChange',
   'deleteFile',
 ])
+// 初始化BEM工具类
+const { b } = createBEM('au')
+const attachments = b('attachments')
+const bem = attachments.aux()
 
 // ==================== 难点1: 滚动检测与优化 ====================
 const containerRef = ref<HTMLElement | null>(null)
@@ -307,8 +305,9 @@ watch(
                 <span>{{ item.name }}</span>
                 <el-icon
                   @click="$emit('deleteFile', item, index)"
-                  >×</el-icon
                 >
+                  ×
+                </el-icon>
               </div>
               <div :class="bem.e('card-body')">
                 {{ item.description || '无描述' }}

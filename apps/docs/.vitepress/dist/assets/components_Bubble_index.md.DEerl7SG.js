@@ -1,4 +1,23 @@
-import{_ as i,a as t,o as a,ai as n}from"./chunks/framework.CHJro7v5.js";const c=JSON.parse('{"title":"Bubble 气泡组件","description":"","frontmatter":{},"headers":[],"relativePath":"components/Bubble/index.md","filePath":"components/Bubble/index.md"}'),d={name:"components/Bubble/index.md"};function e(l,s,h,k,p,r){return a(),t("div",null,s[0]||(s[0]=[n(`<h1 id="bubble-气泡组件" tabindex="-1">Bubble 气泡组件 <a class="header-anchor" href="#bubble-气泡组件" aria-label="Permalink to &quot;Bubble 气泡组件&quot;">​</a></h1><p>Bubble 组件提供了一个用于展示对话气泡的组件，支持多种样式变体和打字机效果。</p><h2 id="功能特点" tabindex="-1">功能特点 <a class="header-anchor" href="#功能特点" aria-label="Permalink to &quot;功能特点&quot;">​</a></h2><ul><li>💬 多样化气泡 - 支持多种气泡变体和形状</li><li>👤 头像配置 - 灵活的头像展示和自定义</li><li>📝 Markdown支持 - 可选择性启用Markdown渲染</li><li>⌨️ 打字机效果 - 支持集成打字机动画</li><li>🛡️ XSS防御 - 内置内容安全过滤</li><li>🌫️ 雾化效果 - 支持内容雾化处理</li></ul><h2 id="基础用法" tabindex="-1">基础用法 <a class="header-anchor" href="#基础用法" aria-label="Permalink to &quot;基础用法&quot;">​</a></h2><div class="language-vue vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">vue</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">template</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&gt;</span></span>
+import {
+  _ as i,
+  a as t,
+  o as a,
+  ai as n,
+} from './chunks/framework.zDigGmb2.js'
+const c = JSON.parse(
+    '{"title":"Bubble 气泡组件","description":"","frontmatter":{},"headers":[],"relativePath":"components/Bubble/index.md","filePath":"components/Bubble/index.md"}'
+  ),
+  d = { name: 'components/Bubble/index.md' }
+function e(l, s, h, k, p, r) {
+  return (
+    a(),
+    t(
+      'div',
+      null,
+      s[0] ||
+        (s[0] = [
+          n(
+            `<h1 id="bubble-气泡组件" tabindex="-1">Bubble 气泡组件 <a class="header-anchor" href="#bubble-气泡组件" aria-label="Permalink to &quot;Bubble 气泡组件&quot;">​</a></h1><p>Bubble 组件提供了一个用于展示对话气泡的组件，支持多种样式变体和打字机效果。</p><h2 id="功能特点" tabindex="-1">功能特点 <a class="header-anchor" href="#功能特点" aria-label="Permalink to &quot;功能特点&quot;">​</a></h2><ul><li>💬 多样化气泡 - 支持多种气泡变体和形状</li><li>👤 头像配置 - 灵活的头像展示和自定义</li><li>📝 Markdown支持 - 可选择性启用Markdown渲染</li><li>⌨️ 打字机效果 - 支持集成打字机动画</li><li>🛡️ XSS防御 - 内置内容安全过滤</li><li>🌫️ 雾化效果 - 支持内容雾化处理</li></ul><h2 id="基础用法" tabindex="-1">基础用法 <a class="header-anchor" href="#基础用法" aria-label="Permalink to &quot;基础用法&quot;">​</a></h2><div class="language-vue vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">vue</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">template</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&gt;</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  &lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">au-bubble</span></span>
 <span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">    content</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;这是一条消息内容&quot;</span></span>
 <span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">    placement</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;start&quot;</span></span>
@@ -26,4 +45,12 @@ import{_ as i,a as t,o as a,ai as n}from"./chunks/framework.CHJro7v5.js";const c
 <span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">  shape</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">?:</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> &#39;corner&#39;</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> |</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> &#39;round&#39;</span></span>
 <span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">  typing</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">?:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> boolean</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> TypingConfig</span></span>
 <span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">  xss</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">?:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> boolean</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> XSSConfig</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></div>`,12)]))}const F=i(d,[["render",e]]);export{c as __pageData,F as default};
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></div>`,
+            12
+          ),
+        ])
+    )
+  )
+}
+const F = i(d, [['render', e]])
+export { c as __pageData, F as default }

@@ -1,4 +1,23 @@
-import{_ as i,a,o as n,ai as h}from"./chunks/framework.CHJro7v5.js";const g=JSON.parse('{"title":"Config 全局配置组件","description":"","frontmatter":{},"headers":[],"relativePath":"components/Config/index.md","filePath":"components/Config/index.md"}'),t={name:"components/Config/index.md"};function l(k,s,p,e,d,r){return n(),a("div",null,s[0]||(s[0]=[h(`<h1 id="config-全局配置组件" tabindex="-1">Config 全局配置组件 <a class="header-anchor" href="#config-全局配置组件" aria-label="Permalink to &quot;Config 全局配置组件&quot;">​</a></h1><p>Config 组件提供了一种为组件树提供全局配置的机制，特别是针对 Markdown 相关功能的配置。</p><h2 id="功能特点" tabindex="-1">功能特点 <a class="header-anchor" href="#功能特点" aria-label="Permalink to &quot;功能特点&quot;">​</a></h2><ul><li>🌍 全局配置 - 统一管理组件配置</li><li>🔌 插件系统 - 支持 Markdown 插件配置</li><li>🎨 代码高亮 - 配置代码块高亮方式</li><li>🧩 依赖注入 - 使用 Vue 的 provide/inject 机制</li></ul><h2 id="基础用法" tabindex="-1">基础用法 <a class="header-anchor" href="#基础用法" aria-label="Permalink to &quot;基础用法&quot;">​</a></h2><div class="language-vue vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">vue</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">template</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&gt;</span></span>
+import {
+  _ as i,
+  a,
+  o as n,
+  ai as h,
+} from './chunks/framework.zDigGmb2.js'
+const g = JSON.parse(
+    '{"title":"Config 全局配置组件","description":"","frontmatter":{},"headers":[],"relativePath":"components/Config/index.md","filePath":"components/Config/index.md"}'
+  ),
+  t = { name: 'components/Config/index.md' }
+function l(k, s, p, e, d, r) {
+  return (
+    n(),
+    a(
+      'div',
+      null,
+      s[0] ||
+        (s[0] = [
+          h(
+            `<h1 id="config-全局配置组件" tabindex="-1">Config 全局配置组件 <a class="header-anchor" href="#config-全局配置组件" aria-label="Permalink to &quot;Config 全局配置组件&quot;">​</a></h1><p>Config 组件提供了一种为组件树提供全局配置的机制，特别是针对 Markdown 相关功能的配置。</p><h2 id="功能特点" tabindex="-1">功能特点 <a class="header-anchor" href="#功能特点" aria-label="Permalink to &quot;功能特点&quot;">​</a></h2><ul><li>🌍 全局配置 - 统一管理组件配置</li><li>🔌 插件系统 - 支持 Markdown 插件配置</li><li>🎨 代码高亮 - 配置代码块高亮方式</li><li>🧩 依赖注入 - 使用 Vue 的 provide/inject 机制</li></ul><h2 id="基础用法" tabindex="-1">基础用法 <a class="header-anchor" href="#基础用法" aria-label="Permalink to &quot;基础用法&quot;">​</a></h2><div class="language-vue vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">vue</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">template</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&gt;</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  &lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">au-config</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    :</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">md-plugins</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">markdownPlugins</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    :</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">highlight</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">highlightFunction</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;</span></span>
@@ -45,4 +64,12 @@ import{_ as i,a,o as n,ai as h}from"./chunks/framework.CHJro7v5.js";const g=JSON
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 使用配置</span></span>
 <span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> highlight</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> config.highlight</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> mdPlugins</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> config.mdPlugins</span></span></code></pre></div>`,15)]))}const y=i(t,[["render",l]]);export{g as __pageData,y as default};
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> mdPlugins</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> config.mdPlugins</span></span></code></pre></div>`,
+            15
+          ),
+        ])
+    )
+  )
+}
+const y = i(t, [['render', l]])
+export { g as __pageData, y as default }

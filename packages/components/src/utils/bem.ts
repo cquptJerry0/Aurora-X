@@ -14,7 +14,7 @@ type BEMModifiers =
  * @param namespace 命名空间前缀
  * @returns BEM工具对象
  */
-export const createBEM = (namespace: string) => {
+export function createBEM(namespace: string) {
   /**
    * 创建块名称
    * @param block 块名称

@@ -1,4 +1,5 @@
-import { TypingConfig, XSSConfig } from '../Typewriter/type';
+import type { TypingConfig, XSSConfig } from '../Typewriter/type'
+
 export interface BubbleProps {
   /**
    * 气泡内容

@@ -41,6 +41,12 @@ Typewriter 组件提供了一个具有打字机动画效果的文本显示器，
 ### 代码高亮
 
 ````vue
+<script setup>
+import { usePrism } from 'aurora-x'
+
+const highlightFunction = usePrism()
+</script>
+
 <template>
   <au-typewriter
     content="```javascript\nfunction hello() {\n  console.log('Hello world');\n}\n```"
@@ -49,12 +55,6 @@ Typewriter 组件提供了一个具有打字机动画效果的文本显示器，
     :highlight="highlightFunction"
   />
 </template>
-
-<script setup>
-import { usePrism } from 'aurora-x'
-
-const highlightFunction = usePrism()
-</script>
 ````
 
 ## 属性

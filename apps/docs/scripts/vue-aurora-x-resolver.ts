@@ -23,16 +23,16 @@ export function tovUIResolver(): ComponentResolver {
           name: 'Bubble',
           from: 'vue-aurora-x',
           // 这里的关键是直接使用导出的组件名
-          sideEffects: 'vue-aurora-x/dist/style.css'
+          sideEffects: 'vue-aurora-x/dist/style.css',
         }
       }
-      
+
       // 处理Button组件
       if (name === 'Button') {
         return {
           name: 'Button',
           from: 'vue-aurora-x',
-          sideEffects: 'vue-aurora-x/dist/style.css'
+          sideEffects: 'vue-aurora-x/dist/style.css',
         }
       }
 
@@ -42,7 +42,7 @@ export function tovUIResolver(): ComponentResolver {
         return {
           name: componentName,
           from: 'vue-aurora-x',
-          sideEffects: 'vue-aurora-x/dist/style.css'
+          sideEffects: 'vue-aurora-x/dist/style.css',
         }
       }
 

@@ -6,40 +6,39 @@ on:
     paths:
       - 'apps/docs/**'
       - 'packages/components/**'
-      - 'package.json'
-      - 'pnpm-lock.yaml'
+      - package.json
+      - pnpm-lock.yaml
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    
-    - name: 安装pnpm
-      uses: pnpm/action-setup@v3
-      with:
-        version: 10.9.0
-        
-    - name: 设置Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '18'
-        cache: 'pnpm'
-    
-    - name: 安装依赖
-      run: pnpm install
-    
-    - name: 构建组件库
-      run: pnpm run build:components
-    
-    - name: 构建文档站点
-      run: pnpm run build:docs
-    
-    - name: 上传Pages构建结果
-      uses: actions/upload-pages-artifact@v2
-      with:
-        path: apps/docs/.vitepress/dist
-    
-    - name: 部署到GitHub Pages
-      uses: actions/deploy-pages@v2
-   
+      - uses: actions/checkout@v3
+
+      - name: 安装pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 10.9.0
+
+      - name: 设置Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: pnpm
+
+      - name: 安装依赖
+        run: pnpm install
+
+      - name: 构建组件库
+        run: pnpm run build:components
+
+      - name: 构建文档站点
+        run: pnpm run build:docs
+
+      - name: 上传Pages构建结果
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: apps/docs/.vitepress/dist
+
+      - name: 部署到GitHub Pages
+        uses: actions/deploy-pages@v2

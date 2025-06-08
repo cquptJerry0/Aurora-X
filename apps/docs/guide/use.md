@@ -31,11 +31,11 @@ export default defineConfig({
           // 自定义包名，默认为 'aurora-x'
           packageName: 'aurora-x',
           // 排除不需要自动导入的组件
-          exclude: []
-        })
-      ]
-    })
-  ]
+          exclude: [],
+        }),
+      ],
+    }),
+  ],
 })
 ```
 
@@ -44,16 +44,16 @@ export default defineConfig({
 配置完成后，你可以直接在模板中使用组件，无需手动导入：
 
 ```vue
+<script setup>
+// 无需手动导入组件
+const text = ref('Hello World')
+</script>
+
 <template>
   <!-- 使用带前缀的组件名 -->
   <AuBubble content="Hello World" />
   <AuTypewriter :text="text" />
 </template>
-
-<script setup>
-// 无需手动导入组件
-const text = ref('Hello World')
-</script>
 ```
 
 ### 不使用前缀
@@ -69,11 +69,11 @@ export default defineConfig({
       resolvers: [
         AuroraXNoPrefix({
           packageName: 'aurora-x',
-          exclude: []
-        })
-      ]
-    })
-  ]
+          exclude: [],
+        }),
+      ],
+    }),
+  ],
 })
 ```
 
@@ -84,4 +84,4 @@ export default defineConfig({
   <Bubble content="Hello World" />
   <Typewriter :text="text" />
 </template>
-``` 
+```

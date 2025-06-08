@@ -12,17 +12,6 @@ Config 组件提供了一种为组件树提供全局配置的机制，特别是�
 ## 基础用法
 
 ```vue
-<template>
-  <au-config
-    :md-plugins="markdownPlugins"
-    :highlight="highlightFunction"
-  >
-    <!-- 组件内容将继承配置 -->
-    <au-typewriter content="# 标题" is-markdown />
-    <au-bubble content="## 子标题" is-markdown />
-  </au-config>
-</template>
-
 <script setup>
 import { markdownItAnchor } from 'markdown-it-anchor'
 import { ref } from 'vue'
@@ -36,7 +25,7 @@ const markdownPlugins = [
 ]
 
 // 代码高亮函数
-const highlightFunction = (code, language) => {
+function highlightFunction(code, language) {
   if (language && hljs.getLanguage(language)) {
     try {
       return hljs.highlight(code, { language }).value
@@ -47,6 +36,17 @@ const highlightFunction = (code, language) => {
   return ''
 }
 </script>
+
+<template>
+  <au-config
+    :md-plugins="markdownPlugins"
+    :highlight="highlightFunction"
+  >
+    <!-- 组件内容将继承配置 -->
+    <au-typewriter content="# 标题" is-markdown />
+    <au-bubble content="## 子标题" is-markdown />
+  </au-config>
+</template>
 ```
 
 ## 属性

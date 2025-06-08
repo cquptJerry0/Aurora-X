@@ -13,16 +13,6 @@ Attachments 组件提供一个灵活的文件附件展示容器，支持多种�
 ## 基础用法
 
 ```vue
-<template>
-  <au-attachments
-    :items="attachmentList"
-    overflow="scrollX"
-    @uploadDrop="handleFileDrop"
-    @uploadChange="handleUploadClick"
-    @deleteFile="handleDeleteFile"
-  />
-</template>
-
 <script setup>
 import { ref } from 'vue'
 
@@ -51,6 +41,16 @@ function handleDeleteFile(file, index) {
   // 处理删除文件事件
 }
 </script>
+
+<template>
+  <au-attachments
+    :items="attachmentList"
+    overflow="scrollX"
+    @upload-drop="handleFileDrop"
+    @upload-change="handleUploadClick"
+    @delete-file="handleDeleteFile"
+  />
+</template>
 ```
 
 ## 属性

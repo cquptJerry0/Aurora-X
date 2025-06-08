@@ -1,31 +1,20 @@
 <script setup lang="ts">
 // 导入必要的Vue类型和依赖
 import type { ComputedRef } from 'vue'
+// 导入自定义工具函数 - 代码高亮和BEM样式工具
+import { createBEM, usePrism } from '../../utils'
+// 导入应用配置钩子，用于获取全局配置
+import { useConfig } from '../Config/hooks.ts'
 import type {
   TypewriterInstance,
   TypewriterProps,
   TypingConfig,
 } from './type'
-// 导入自定义工具函数 - 代码高亮和BEM样式工具
-import { usePrism, createBEM } from '../../utils'
-// 导入应用配置钩子，用于获取全局配置
-import { useConfig } from '../Config/hooks.ts'
 // 导入拆分出的可组合式函数
 import { useMarkdown } from './composables/useMarkdown.ts'
 import { useFogEffect } from './composables/useFogEffect.ts'
 
-/**
- * 初始化BEM命名工具
- * BEM: Block-Element-Modifier命名规范
- *
- * 使用示例:
- * bem.b() => 'au-typewriter'
- * bem.e('content') => 'au-typewriter__content'
- * bem.em('content', {active: true}) => 'au-typewriter__content--active'
- */
-const { b } = createBEM('au') // 创建以'au'为命名空间的BEM工具
-const typewriter = b('typewriter') // 创建以'typewriter'为块的命名工具
-const bem = typewriter.aux() // 获取辅助方法集合
+// 获取辅助方法集合
 
 /**
  * 组件属性定义及默认值
@@ -110,9 +99,7 @@ const props = withDefaults(defineProps<TypewriterProps>(), {
       SANITIZE_DOM: true,
     },
   }),
-})
-
-/**
+}) /**
  * 组件事件定义
  * @event start - 开始打字时触发
  * @event writing - 打字过程中触发
@@ -125,9 +112,18 @@ const emits = defineEmits<{
   writing: [instance: TypewriterInstance]
   /** 打字结束时触发 */
   finish: [instance: TypewriterInstance]
-}>()
-
-// 获取应用全局配置
+}>() /**
+ * 初始化BEM命名工具
+ * BEM: Block-Element-Modifier命名规范
+ *
+ * 使用示例:
+ * bem.b() => 'au-typewriter'
+ * bem.e('content') => 'au-typewriter__content'
+ * bem.em('content', {active: true}) => 'au-typewriter__content--active'
+ */
+const { b } = createBEM('au') // 创建以'au'为命名空间的BEM工具
+const typewriter = b('typewriter') // 创建以'typewriter'为块的命名工具
+const bem = typewriter.aux() // 获取应用全局配置
 const appConfig = useConfig()
 
 /**
@@ -478,12 +474,12 @@ const contentClass = computed(() => {
 </script>
 
 <template>
-  <!-- 
+  <!--
     容器元素：使用BEM命名的根元素
     类名: 'au-typewriter'
   -->
   <div ref="typeWriterRef" :class="containerClass">
-    <!-- 
+    <!--
       内容元素：动态生成类名，并设置CSS变量
       可能的类名组合:
       - 'au-typewriter__content'

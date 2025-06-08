@@ -16,7 +16,7 @@ const AuroraX: Plugin = {
     app.component('BubbleList', BubbleList)
     app.component('Config', Config)
     app.component('Typewriter', Typewriter)
-  }
+  },
 }
 
 export default AuroraX

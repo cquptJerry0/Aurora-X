@@ -36,6 +36,8 @@ module.exports = antfu({
     'arrow-parens': ['error', 'always'],
     // 对象末尾逗号
     'comma-dangle': ['error', 'always-multiline'],
+    // 运算符位置允许在行尾
+    'operator-linebreak': ['off'],
   },
 
   // 自定义规则
@@ -80,6 +82,27 @@ module.exports = antfu({
     'ts/ban-ts-comment': 'off',
     // 关闭 process 全局变量检查
     'node/prefer-global/process': 'off',
+    // 关闭关于多行表达式的运算符位置规则
+    'operator-linebreak': ['off'],
+    // 放宽缩进规则
+    'indent': ['warn', 2, {
+      SwitchCase: 1,
+      VariableDeclarator: 'first',
+      outerIIFEBody: 1,
+      MemberExpression: 1,
+      ignoredNodes: ['TemplateLiteral *'],
+      ignoreComments: true,
+    }],
+    // 关闭换行后条件判断的花括号规则
+    'brace-style': ['off'],
+    // 允许if语句后不换行
+    'curly': ['off'],
+    // 关闭参数括号规则
+    'function-call-argument-newline': ['off'],
+    // 关闭函数参数换行规则
+    'function-paren-newline': ['off'],
+    // 关闭逗号位置规则
+    'comma-style': ['off'],
   },
 
   // 忽略的文件和目录
@@ -90,6 +113,8 @@ module.exports = antfu({
     '**/lib/**', // 库文件目录
     '**/es/**', // ES 模块目录
     '**/types/**', // 类型定义目录
+    '**/packages/*/types/**', // 忽略各package下的types目录
+    '**/*/types/**', // 忽略所有types目录
     '**/public/**', // 静态资源目录
     '**/vite.config.ts', // Vite 配置文件
     '**/eslint.config.js', // ESLint 配置文件

@@ -12,7 +12,7 @@ type BEMModifiers =
  * @param namespace 命名空间前缀
  * @returns BEM工具对象
  */
-export declare const createBEM: (namespace: string) => {
+export declare function createBEM(namespace: string): {
   b: (block: string) => {
     b: string
     e: (element: string) => string

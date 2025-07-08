@@ -1,6 +1,5 @@
-import type { BubbleProps } from '../Bubble/type'
-import type { BubbleListProps } from './type.d.ts'
-
+import { BubbleProps } from '../Bubble/type'
+import { BubbleListProps } from './type.d.ts'
 declare const _default: <T extends BubbleProps>(
   __VLS_props: NonNullable<Awaited<typeof __VLS_setup>>['props'],
   __VLS_ctx?: __VLS_PrettifyLocal<
@@ -32,16 +31,16 @@ declare const _default: <T extends BubbleProps>(
         Partial<{}>
     > &
       import('vue').PublicProps
-    expose: (
+    expose(
       exposed: import('vue').ShallowUnwrapRef<{
         scrollToTop: () => void
         scrollToBottom: () => void
         scrollToBubble: (index: number) => void
       }>
-    ) => void
+    ): void
     attrs: any
     slots: Partial<Record<number, (_: { item: any }) => any>> & {
-      backToBottom?: (_: {}) => any
+      backToBottom?(_: {}): any
     }
     emit: (event: 'complete', ...args: any[]) => void
   }>

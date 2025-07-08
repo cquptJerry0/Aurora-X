@@ -1,9 +1,8 @@
-import type {
+import {
   TypewriterInstance,
   TypewriterProps,
   TypingConfig,
 } from './type'
-
 declare const _default: import('vue').DefineComponent<
   TypewriterProps,
   {
@@ -28,8 +27,8 @@ declare const _default: import('vue').DefineComponent<
   import('vue').ComponentOptionsMixin,
   {
     start: (instance: TypewriterInstance) => any
-    finish: (instance: TypewriterInstance) => any
     writing: (instance: TypewriterInstance) => any
+    finish: (instance: TypewriterInstance) => any
   },
   string,
   import('vue').PublicProps,
@@ -38,17 +37,17 @@ declare const _default: import('vue').DefineComponent<
       onStart?:
         | ((instance: TypewriterInstance) => any)
         | undefined
-      onFinish?:
+      onWriting?:
         | ((instance: TypewriterInstance) => any)
         | undefined
-      onWriting?:
+      onFinish?:
         | ((instance: TypewriterInstance) => any)
         | undefined
     }>,
   {
     content: string
-    typing: boolean | TypingConfig
     isMarkdown: boolean
+    typing: boolean | TypingConfig
     isFog: boolean | import('./type').FogConfig
     xss: boolean | import('./type').XSSConfig
   },

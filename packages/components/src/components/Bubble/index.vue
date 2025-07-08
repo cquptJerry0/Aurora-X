@@ -1,17 +1,13 @@
 <script setup lang="ts">
 import type { ComputedRef } from 'vue'
+import { ElAvatar as AuAvatar } from 'element-plus'
 import type {
   TypewriterInstance,
   TypingConfig,
 } from '../Typewriter/type.d.ts'
-import type { BubbleProps } from './type.d.ts'
 import Typewriter from '../Typewriter/index.vue'
 import { createBEM } from '../../utils'
-import { ElAvatar as AuAvatar } from 'element-plus'
-// 初始化BEM工具类
-const { b } = createBEM('au')
-const bubble = b('bubble')
-const bem = bubble.aux()
+import type { BubbleProps } from './type.d.ts'
 
 const props = withDefaults(defineProps<BubbleProps>(), {
   content: '',
@@ -29,13 +25,16 @@ const props = withDefaults(defineProps<BubbleProps>(), {
   avatarFit: 'cover',
   noStyle: false,
 })
-
 const emits = defineEmits([
   'start',
   'finish',
   'writing',
   'avatarError',
 ])
+// 初始化BEM工具类
+const { b } = createBEM('au')
+const bubble = b('bubble')
+const bem = bubble.aux()
 
 const internalDestroyed = ref(false) // 内部销毁状态
 // 响应式变量跟踪打字状态
@@ -224,7 +223,7 @@ const typewriterClass = computed(() => {
         bem.em('avatar', { size: true }),
       ]"
     >
-      <au-avatar
+      <AuAvatar
         :size="0"
         :src="avatar"
         :shape="avatarShape"
@@ -303,6 +302,4 @@ const typewriterClass = computed(() => {
   </div>
 </template>
 
-<style scoped lang="scss">
-@import './style.scss';
-</style>
+<style scoped lang="scss" src="./style.scss"></style>

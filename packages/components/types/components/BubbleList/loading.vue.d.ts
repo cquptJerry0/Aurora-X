@@ -1,4 +1,4 @@
-interface __VLS_Props {
+type __VLS_Props = {
   /**
    * SVG尺寸
    * @default 40

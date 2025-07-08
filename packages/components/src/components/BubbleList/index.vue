@@ -1,13 +1,16 @@
 <script setup lang="ts" generic="T extends BubbleProps">
 import { ArrowDownBold } from '@element-plus/icons-vue'
+import { ElIcon } from 'element-plus'
 import { onBeforeUnmount, onMounted } from 'vue'
+
 import type { BubbleProps } from '../Bubble/type'
 import type { TypewriterInstance } from '../Typewriter/type'
 import Bubble from '../Bubble/index.vue'
 import { createBEM } from '../../utils'
 import type { BubbleListProps } from './type.d.ts'
+
 import loadingBg from './loading.vue'
-import { ElIcon } from 'element-plus'
+
 const props = withDefaults(defineProps<BubbleListProps<T>>(), {
   list: () => [] as T[],
   maxHeight: '500px',
@@ -42,6 +45,7 @@ const showBackToBottom = ref(false)
 function checkScrollbars() {
   const el = scrollContainer.value
   if (!el) return
+
   hasVertical.value = el.scrollHeight > el.clientHeight
   hasHorizontal.value = el.scrollWidth > el.clientWidth
 }
@@ -272,7 +276,7 @@ defineExpose({
       @click="scrollToBottom"
     >
       <slot name="backToBottom">
-        <el-icon
+        <ElIcon
           :class="bem.e('back-icon')"
           :style="{ color: props.btnColor }"
         >
@@ -281,12 +285,10 @@ defineExpose({
             v-if="props.btnLoading"
             :class="bem.e('loading-bg')"
           />
-        </el-icon>
+        </ElIcon>
       </slot>
     </div>
   </div>
 </template>
 
-<style scoped lang="scss">
-@import './style.scss';
-</style>
+<style scoped lang="scss" src="./style.scss"></style>

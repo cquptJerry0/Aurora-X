@@ -1,4 +1,4 @@
-import type { BubbleProps } from '../Bubble/type'
+import { BubbleProps } from '../Bubble/type'
 // 触发索引的类型：只有最后一个、全部或自定义索引数组
 export type TriggerIndices = 'only-last' | 'all' | number[]
 

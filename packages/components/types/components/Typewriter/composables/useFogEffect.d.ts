@@ -1,4 +1,4 @@
-import type { Ref } from 'vue'
+import { Ref } from 'vue'
 /**
  * 雾化效果和背景色处理钩子
  * 用于自动检测和适配容器背景色，应用于打字机雾化效果

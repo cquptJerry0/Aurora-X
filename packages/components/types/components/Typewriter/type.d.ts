@@ -1,4 +1,4 @@
-import type { HighlightFunction } from '../../utils/usePrism'
+import { HighlightFunction } from '../../utils/usePrism'
 /**
  * 打字效果配置项
  */

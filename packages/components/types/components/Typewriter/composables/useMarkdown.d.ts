@@ -1,5 +1,5 @@
-import type { default as MarkdownIt } from 'markdown-it'
-import type { XSSConfig } from '../type'
+import { default as MarkdownIt } from 'markdown-it'
+import { XSSConfig } from '../type'
 /**
  * Markdown渲染和配置管理钩子
  * 提供高度可配置的Markdown渲染功能

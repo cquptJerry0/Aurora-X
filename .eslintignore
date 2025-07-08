@@ -1,0 +1,24 @@
+# 忽略构建输出目录
+dist/
+build/
+lib/
+es/
+
+# 忽略依赖包目录
+node_modules/
+
+# 忽略类型定义文件
+*.d.ts
+types/
+
+# 忽略JSON文件
+*.json
+**/*.json
+package.json
+package-lock.json
+pnpm-lock.yaml
+*.schema.json
+
+# 忽略配置文件
+vite.config.ts
+eslint.config.js 

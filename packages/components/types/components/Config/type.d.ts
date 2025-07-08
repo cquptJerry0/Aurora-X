@@ -1,5 +1,4 @@
-import type { default as MarkdownIt } from 'markdown-it'
-
+import { default as MarkdownIt } from 'markdown-it'
 export type MarkdownItPlugin = (md: MarkdownIt) => void
 
 export interface ConfigProps {

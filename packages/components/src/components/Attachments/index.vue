@@ -370,6 +370,4 @@ watch(
   </div>
 </template>
 
-<style lang="scss" scoped>
-@import './style.scss';
-</style>
+<style lang="scss" scoped src="./style.scss"></style>

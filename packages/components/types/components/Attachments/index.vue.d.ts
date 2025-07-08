@@ -1,13 +1,12 @@
-import type { AttachmentsProps } from './type.d.ts'
-
+import { AttachmentsProps } from './type.d.ts'
 declare function __VLS_template(): {
   attrs: Partial<{}>
   slots: {
-    'empty-upload'?: (_: {}) => any
-    'file-list'?: (_: {
+    'empty-upload'?(_: {}): any
+    'file-list'?(_: {
       items: import('./type.d.ts').AttachmentItem[]
-    }) => any
-    'append-upload'?: (_: {}) => any
+    }): any
+    'append-upload'?(_: {}): any
   }
   refs: {
     wrapperRef: HTMLDivElement

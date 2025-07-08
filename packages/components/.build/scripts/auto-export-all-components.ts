@@ -78,9 +78,9 @@ async function generateAutoEntry() {
       (c) => `import ${c.name} from '${c.path}'`
     ),
     '',
-    `export * from './components'`, // 导出所有组件
-    `export * from './hooks'`, // 导出所有钩子
-    `export * from './utils'`, // 导出所有工具函数
+    "export * from './components'", // 导出所有组件
+    "export * from './hooks'", // 导出所有钩子
+    "export * from './utils'", // 导出所有工具函数
     '',
     'const AuroraX: Plugin = {',
     '  install(app: App) {',

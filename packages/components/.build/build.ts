@@ -122,19 +122,41 @@ const buildConfig: BuildOptions = {
        * 输出: 'es/Button/index.css'
        */
       assetFileNames: ((info: any) => {
-        const srcName = info.originalFileNames[0]
-        // 收集所有CSS内容以生成总文件
-        if (info.name === 'style.css') {
-          return 'index.css' // 总CSS文件输出到根目录
-        }
-        if (srcName) {
-          if (srcName.includes('src/components/')) {
-            const fileName = srcName
-              .replace('src/components/', '')
-              .replace('index.vue', 'index.css')
-            return `es/${fileName}`
+        // 确保所有CSS文件都使用.css扩展名
+        if (
+          info.name.endsWith('.css') ||
+          info.name === 'style.css'
+        ) {
+          const srcName = info.originalFileNames?.[0] || ''
+
+          // 收集所有CSS内容以生成总文件
+          if (info.name === 'style.css') {
+            return 'index.css' // 总CSS文件输出到根目录
           }
+
+          // 处理组件样式文件
+          if (srcName && srcName.includes('src/components/')) {
+            // 提取组件路径，移除src/components/前缀
+            const componentPath = srcName.replace(
+              'src/components/',
+              ''
+            )
+            // 提取目录结构，替换任何文件扩展名为.css
+            const dirPath = componentPath
+              .split('/')
+              .slice(0, -1)
+              .join('/')
+            const fileName = componentPath.split('/').pop() || ''
+            const baseName = fileName.split('.')[0]
+
+            return `es/${dirPath}/${baseName}.css`
+          }
+
+          // 其他CSS文件保持原样
+          return `es/${info.name}`
         }
+
+        // 非CSS文件保持原样
         return info.name
       }) as unknown as string,
     },

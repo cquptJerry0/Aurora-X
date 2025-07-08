@@ -12,6 +12,7 @@ declare module 'vue' {
     Bubble: typeof import('./src/components/Bubble/index.vue')['default']
     BubbleList: typeof import('./src/components/BubbleList/index.vue')['default']
     Config: typeof import('./src/components/Config/index.vue')['default']
+    Demo: typeof import('./src/components/Attachments/demo.vue')['default']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElIcon: typeof import('element-plus/es')['ElIcon']
     Loading: typeof import('./src/components/BubbleList/loading.vue')['default']

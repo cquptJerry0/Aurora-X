@@ -1,9 +1,8 @@
-import type { ConfigProps } from './type'
-
+import { ConfigProps } from './type'
 declare function __VLS_template(): {
   attrs: Partial<{}>
   slots: {
-    default?: (_: {}) => any
+    default?(_: {}): any
   }
   refs: {}
   rootEl: any

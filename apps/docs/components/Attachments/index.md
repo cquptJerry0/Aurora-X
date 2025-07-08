@@ -53,6 +53,10 @@ function handleDeleteFile(file, index) {
 </template>
 ```
 
+## 示例
+
+<demo src="../../demos/Attachment.vue" />
+
 ## 属性
 
 | 属性名     | 说明             | 类型                               | 默认值      |

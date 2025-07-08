@@ -1,37 +1,70 @@
 {
-  "hash": "930a7cc6",
-  "configHash": "c209e54d",
-  "lockfileHash": "1d33e361",
-  "browserHash": "65d52f6f",
+  "hash": "67eed161",
+  "configHash": "362118d7",
+  "lockfileHash": "d227cbca",
+  "browserHash": "cf39d300",
   "optimized": {
     "vue": {
       "src": "../../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "3ba50dda",
+      "fileHash": "e869398e",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../../node_modules/@vue/devtools-api/dist/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "73fb6cc8",
+      "fileHash": "cae9fb9b",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
       "src": "../../../../../node_modules/vitepress/node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "7f07e10b",
+      "fileHash": "27e08d0d",
       "needsInterop": false
     },
     "vite-plugin-vitepress-demo/theme": {
       "src": "../../../../../node_modules/vite-plugin-vitepress-demo/dist/theme/index.mjs",
       "file": "vite-plugin-vitepress-demo_theme.js",
-      "fileHash": "00815be8",
+      "fileHash": "a02c4621",
+      "needsInterop": false
+    },
+    "@element-plus/icons-vue": {
+      "src": "../../../../../node_modules/@element-plus/icons-vue/dist/index.js",
+      "file": "@element-plus_icons-vue.js",
+      "fileHash": "00a7a70a",
+      "needsInterop": false
+    },
+    "element-plus": {
+      "src": "../../../../../node_modules/element-plus/es/index.mjs",
+      "file": "element-plus.js",
+      "fileHash": "9047c6e8",
+      "needsInterop": false
+    },
+    "element-plus/es/components/button/style/css": {
+      "src": "../../../../../node_modules/element-plus/es/components/button/style/css.mjs",
+      "file": "element-plus_es_components_button_style_css.js",
+      "fileHash": "e8de1dd3",
+      "needsInterop": false
+    },
+    "element-plus/es/components/icon/style/css": {
+      "src": "../../../../../node_modules/element-plus/es/components/icon/style/css.mjs",
+      "file": "element-plus_es_components_icon_style_css.js",
+      "fileHash": "a3375cbc",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-WECGYMF3": {
-      "file": "chunk-WECGYMF3.js"
+    "chunk-2U5BGBBM": {
+      "file": "chunk-2U5BGBBM.js"
+    },
+    "chunk-NXRN2BIP": {
+      "file": "chunk-NXRN2BIP.js"
+    },
+    "chunk-3WSQ2KI5": {
+      "file": "chunk-3WSQ2KI5.js"
+    },
+    "chunk-5WRI5ZAA": {
+      "file": "chunk-5WRI5ZAA.js"
     }
   }
 }
